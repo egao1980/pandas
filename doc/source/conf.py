@@ -86,7 +86,7 @@ with open("index.rst") as f:
 # JP: added from sphinxdocs
 autosummary_generate = False
 
-if any(re.match("\s*api\s*", l) for l in index_rst_lines):
+if any(re.match(r"\s*api\s*", l) for l in index_rst_lines):
     autosummary_generate = True
 
 # numpydoc
@@ -329,7 +329,7 @@ nbsphinx_allow_errors = True
 latex_documents = [
     ('index', 'pandas.tex',
      u'pandas: powerful Python data analysis toolkit',
-     u'Wes McKinney\n\& PyData Development Team', 'manual'),
+     u'Wes McKinney\n\\& PyData Development Team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
